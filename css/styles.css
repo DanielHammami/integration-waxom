@@ -1,0 +1,11 @@
+.main-container header {
+  height: 1025px;
+  background-image: url("../images/image-header.png");
+  background-repeat: no-repeat;
+}
+.main-container header .logo {
+  width: 182px;
+  margin: 33px 0 0 365px;
+}
+
+/*# sourceMappingURL=styles.css.map */
