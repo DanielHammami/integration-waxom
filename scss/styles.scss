@@ -1,12 +1,55 @@
+@import '_variables.scss';
+@import '_mixins.scss';
+
+body {
+    background-image: url("../images/Waxom\ Hemepage.jpg");
+    // opacity: .5;
+    font-family: 'Montserrat', sans-serif;
+}
+
 .main-container {
     header {
         height: 1025px;
-        background-image: url("../images/image-header.png");
+        //background-image: url("../images/image-header.png");
         background-repeat: no-repeat;
 
-        .logo {
-            width: 182px;
-            margin: 33px 0 0 365px;
+        .header-container {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .logo-container {
+            display: inline-block;
+            width: 413px;
+            margin: 29px 0 0 362px;
+        }
+
+        nav {
+            display: inline-block;
+            width: 762px;
+            margin-top: 50px;
+            line-height: 33px;
+        }
+
+        .nav-container ul {
+            @include display-flex;
+            @include justify-content-space-between;
+
+            li > a {
+                color: $white;
+                text-decoration: none;
+                font-size: 14px;
+                color: $white;
+            }
+
+            a:hover {
+                color: #c7b299;
+            }
+
+            .icon-rechercher path,
+            .icon-cadenas path {
+                fill: $white;
+            }
         }
     }
 }

@@ -1,11 +1,66 @@
+/*----------------------------*/
+/*----------------------------*/
+/*
+/ media queries
+*/
+/*
+* Colors
+*/
+/*----------------------------*/
+/*----------------------------*/
+/*
+/ Flexbox
+*/
+/* flex-direction */
+/* flex-wrap */
+/* justify-content */
+/* align-items */
+/* align-content */
+body {
+  background-image: url("../images/Waxom Hemepage.jpg");
+  font-family: "Montserrat", sans-serif;
+}
+
 .main-container header {
   height: 1025px;
-  background-image: url("../images/image-header.png");
   background-repeat: no-repeat;
 }
-.main-container header .logo {
-  width: 182px;
-  margin: 33px 0 0 365px;
+.main-container header .header-container {
+  display: flex;
+  flex-direction: row;
+}
+.main-container header .logo-container {
+  display: inline-block;
+  width: 413px;
+  margin: 29px 0 0 362px;
+}
+.main-container header nav {
+  display: inline-block;
+  width: 762px;
+  margin-top: 50px;
+  line-height: 33px;
+}
+.main-container header .nav-container ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
+}
+.main-container header .nav-container ul li > a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 14px;
+  color: #FFFFFF;
+}
+.main-container header .nav-container ul a:hover {
+  color: #c7b299;
+}
+.main-container header .nav-container ul .icon-rechercher path,
+.main-container header .nav-container ul .icon-cadenas path {
+  fill: #FFFFFF;
 }
 
 /*# sourceMappingURL=styles.css.map */
