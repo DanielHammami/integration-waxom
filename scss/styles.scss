@@ -2,20 +2,27 @@
 @import '_mixins.scss';
 
 body {
-    background-image: url("../images/Waxom\ Hemepage.jpg");
-    // opacity: .5;
+    background-image: url("../images/Waxom\ Hemepage.jpg");// à enlever
+    // opacity: .5; // à enlever
     font-family: 'Montserrat', sans-serif;
 }
 
 .main-container {
     header {
-        height: 1025px;
-        //background-image: url("../images/image-header.png");
+        height: 1024px;
+        //background-image: url("../images/image-header.png"); // à remettre
         background-repeat: no-repeat;
 
         .header-container {
-            display: flex;
-            flex-direction: row;
+            @include display-flex;
+            @include flex-direction-row;
+            position: relative;
+        }
+
+        .nav-wrapper {
+            background-color: rgba(241, 169, 160, .5); // à enlever
+            height: 128px;
+            width: 100%;
         }
 
         .logo-container {
@@ -26,14 +33,16 @@ body {
 
         nav {
             display: inline-block;
+            height: 60px;
             width: 762px;
-            margin-top: 50px;
             line-height: 33px;
         }
 
         .nav-container ul {
-            @include display-flex;
-            @include justify-content-space-between;
+            li {
+                float: left;
+                margin-right: 25px;
+            }
 
             li > a {
                 color: $white;
@@ -49,6 +58,92 @@ body {
             .icon-rechercher path,
             .icon-cadenas path {
                 fill: $white;
+            }
+        }
+
+        .slogan-container {
+            position: absolute;
+            top: 386px;
+            left: 134px;
+            @include display-flex;
+            @include justify-content-space-between;
+            width: 86%;
+
+            .icon-arrow-back, .icon-arrow-next {
+                margin-top: 90px;
+
+                .next path {
+                    fill: #d3c1ad;
+                }
+
+                .back path {
+                    fill: #a3a2a0;
+                }
+            }
+
+            .slogan {
+                color: $white;
+            }
+
+            h3 {
+                font-size: 34px;
+                letter-spacing: -.9px;
+                margin-top: -8px;
+                text-align: center;
+            }
+
+            h1 {
+                font-size: 51px;
+                font-weight: 900;
+                padding: 13px 0;
+                text-align: center;
+            }
+
+            p {
+                margin: 8px auto;
+                text-align: center;
+                width: 564px;
+            }
+
+            button {
+                background-color: #998675;
+                border: #998675;
+                border-bottom: .5px solid #736357;
+                border-radius: 3px;
+                color: $white;
+                font-family: 'Raleway', sans-serif;
+                font-size: 14px;
+                font-weight: 700;
+                text-transform: uppercase;
+                height: 50px;
+                width: 170px;
+                margin: 52px auto;
+                transform: translateX(214px);
+            } 
+
+            div[class*='icon-arrow'] svg path {
+                fill: $white;
+            }
+        }
+    }
+
+    .desc-container {
+        height: 340px;
+        width: 1228px;
+        margin: 0 auto;
+        border: 1px solid $black; // à enlever
+
+        .themes {
+            padding: 80px 0;
+        }
+
+        .desc-block--width {
+            width: 266px;
+        }
+
+        .design {
+            .design__icon {
+                //margin-left: 141px;
             }
         }
     }

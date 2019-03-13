@@ -22,12 +22,24 @@ body {
 }
 
 .main-container header {
-  height: 1025px;
+  height: 1024px;
   background-repeat: no-repeat;
 }
 .main-container header .header-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
+  position: relative;
+}
+.main-container header .nav-wrapper {
+  background-color: rgba(241, 169, 160, 0.5);
+  height: 128px;
+  width: 100%;
 }
 .main-container header .logo-container {
   display: inline-block;
@@ -36,18 +48,13 @@ body {
 }
 .main-container header nav {
   display: inline-block;
+  height: 60px;
   width: 762px;
-  margin-top: 50px;
   line-height: 33px;
 }
-.main-container header .nav-container ul {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-between;
-  -ms-flex-pack: space-between;
-  justify-content: space-between;
+.main-container header .nav-container ul li {
+  float: left;
+  margin-right: 25px;
 }
 .main-container header .nav-container ul li > a {
   color: #FFFFFF;
@@ -61,6 +68,78 @@ body {
 .main-container header .nav-container ul .icon-rechercher path,
 .main-container header .nav-container ul .icon-cadenas path {
   fill: #FFFFFF;
+}
+.main-container header .slogan-container {
+  position: absolute;
+  top: 386px;
+  left: 134px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
+  width: 86%;
+}
+.main-container header .slogan-container .icon-arrow-back, .main-container header .slogan-container .icon-arrow-next {
+  margin-top: 90px;
+}
+.main-container header .slogan-container .icon-arrow-back .next path, .main-container header .slogan-container .icon-arrow-next .next path {
+  fill: #d3c1ad;
+}
+.main-container header .slogan-container .icon-arrow-back .back path, .main-container header .slogan-container .icon-arrow-next .back path {
+  fill: #a3a2a0;
+}
+.main-container header .slogan-container .slogan {
+  color: #FFFFFF;
+}
+.main-container header .slogan-container h3 {
+  font-size: 34px;
+  letter-spacing: -0.9px;
+  margin-top: -8px;
+  text-align: center;
+}
+.main-container header .slogan-container h1 {
+  font-size: 51px;
+  font-weight: 900;
+  padding: 13px 0;
+  text-align: center;
+}
+.main-container header .slogan-container p {
+  margin: 8px auto;
+  text-align: center;
+  width: 564px;
+}
+.main-container header .slogan-container button {
+  background-color: #998675;
+  border: #998675;
+  border-bottom: 0.5px solid #736357;
+  border-radius: 3px;
+  color: #FFFFFF;
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  height: 50px;
+  width: 170px;
+  margin: 52px auto;
+  transform: translateX(214px);
+}
+.main-container header .slogan-container div[class*=icon-arrow] svg path {
+  fill: #FFFFFF;
+}
+.main-container .desc-container {
+  height: 340px;
+  width: 1228px;
+  margin: 0 auto;
+  border: 1px solid #000000;
+}
+.main-container .desc-container .themes {
+  padding: 80px 0;
+}
+.main-container .desc-container .desc-block--width {
+  width: 266px;
 }
 
 /*# sourceMappingURL=styles.css.map */
