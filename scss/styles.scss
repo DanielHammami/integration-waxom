@@ -1,6 +1,8 @@
 @import '_variables.scss';
 @import '_mixins.scss';
 
+$color_brown: #c7b299;
+
 body {
     background-image: url("../images/Waxom\ Hemepage.jpg");// à enlever
     // opacity: .5; // à enlever
@@ -58,7 +60,7 @@ body {
                 }
 
                 a:hover {
-                    color: #c7b299;
+                    color: $color_brown;
                 }
 
                 .icon-rechercher path,
@@ -173,22 +175,49 @@ body {
     */
 
     .desc-container {
+        border: 1px solid $black; // à enlever
         height: 340px;
         width: 1228px;
         margin: 0 auto;
-        border: 1px solid $black; // à enlever
 
         .themes {
             padding: 80px 0;
+            @include display-flex;
+            @include justify-content-space-around;
         }
 
-        .desc-block--width {
+        .desc-block {
+            text-align: center;
             width: 266px;
-        }
 
-        .design {
-            .design__icon {
-                //margin-left: 141px;
+            h2 {
+                font-size: 22px;
+                margin-top: 24px;
+                margin-bottom: 14px;
+            }
+            
+            p {
+                color: #8c8c8c;
+                font-size: 14px;
+                line-height: 24px;
+            }
+
+            &:hover {
+                .icon path {
+                    fill: $color_brown;
+                }
+            
+                h2 {
+                    color: $color_brown;
+                }
+            }
+
+            &::after {
+                content: '--------';
+                height: 3px;
+                width: 100px;
+                color: $color_brown;
+                background-color: red;
             }
         }
     }
